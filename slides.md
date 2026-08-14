@@ -44,3 +44,9 @@ Less memes
 ## Workflow Triggers & Structure
 
 Very nice workflow
+
+---
+
+## Caching
+
+Not Ka-Ching
