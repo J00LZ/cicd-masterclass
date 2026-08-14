@@ -7,12 +7,18 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     concurrency:
-      group: ${{ github.ref }}
+      group: ${{ github.ref }}-${{github.job}}
       cancel-in-progress: true
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
-      - uses: DavidAnson/markdownlint-cli2-action@21c1be1b93ad9ed58fa840aacc3f279cde2a72ff
       - uses: pnpm/setup@84cb39b217b10273981911c288cd62326dc7c6d2
         with:
           cache: true
       - run: pnpm run build --base ${{github.event.repository.name}}
+  md-check:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: ${{github.ref}}-${{github.job}}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: DavidAnson/markdownlint-cli2-action@21c1be1b93ad9ed58fa840aacc3f279cde2a72ff
