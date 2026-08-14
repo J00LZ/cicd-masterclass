@@ -1,15 +1,21 @@
 on:
-    pull_request:
-        paths:
-            - slides.md
+  pull_request:
+    paths:
+      - slides.md
 
 jobs:
-    validate:
-        runs-on: ubuntu-latest
-        concurrency:
-            group: ${{ github.ref }}
-            cancel-in-progress: true
-        steps:
-            - uses: actions/checkout@v6
-            - uses: pnpm/setup@v2
-            - run: pnpm run build --base ${{github.event.repository.name}}
+  validate:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ github.ref }}
+      cancel-in-progress: true
+    steps:
+      - uses: actions/checkout@v6
+      - name: Cache Node modules
+        id: cache-primes
+        uses: actions/cache@v6
+        with:
+          path: node_modules
+          key: pnpm-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
+      - uses: pnpm/setup@v2
+      - run: pnpm run build --base ${{github.event.repository.name}}
