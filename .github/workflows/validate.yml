@@ -1,5 +1,5 @@
 on:
-  pull_request:
+  pull_request_target:
     paths:
       - slides.md
 
@@ -10,9 +10,9 @@ jobs:
       group: ${{ github.ref }}
       cancel-in-progress: true
     steps:
-      - uses: actions/checkout@v6
-      - uses: DavidAnson/markdownlint-cli2-action@v24
-      - uses: pnpm/setup@v2
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+      - uses: DavidAnson/markdownlint-cli2-action@21c1be1b93ad9ed58fa840aacc3f279cde2a72ff
+      - uses: pnpm/setup@84cb39b217b10273981911c288cd62326dc7c6d2
         with:
           cache: true
       - run: pnpm run build --base ${{github.event.repository.name}}
