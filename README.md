@@ -1,11 +1,4 @@
-# Welcome to [Slidev](https://github.com/slidevjs/slidev)!
+# Banger CI/CD masterclass code
+[![.github/workflows/build.yml](https://github.com/J00LZ/cicd-masterclass/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/J00LZ/cicd-masterclass/actions/workflows/build.yml)
 
-To start the slide show:
-
-- `pnpm install`
-- `pnpm run dev`
-- visit <http://localhost:3030>
-
-Edit the [slides.md](./slides.md) to see the changes.
-
-Learn more about Slidev at the [documentation](https://sli.dev/).
+Very nice ain't it?
