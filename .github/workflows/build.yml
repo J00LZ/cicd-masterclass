@@ -13,6 +13,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - if: ${{ inputs.reason }}
+        run: "echo Running manual deploy: ${{inputs.reason}}"
       - uses: actions/checkout@v6
       - uses: pnpm/setup@v2
       - run: pnpm run build --base ${{github.event.repository.name}}
