@@ -37,4 +37,4 @@ Continuous Integration and Deployment
 
 ## Memes
 
-Memes
+Less memes
