@@ -19,13 +19,13 @@ Ery noic
 
 Which steps does your program go through to add new features
 
-* Plan
-* ??
-* ??
-* ??
-* ??
-* ??
-* Observe
+- Plan
+- ??
+- ??
+- ??
+- ??
+- ??
+- Observe
 
 ---
 
@@ -56,3 +56,11 @@ Not Ka-Ching
 ## Linting?
 
 It's very noice
+
+---
+
+## Security?
+
+Very secure.
+
+Source: Trust me bro
