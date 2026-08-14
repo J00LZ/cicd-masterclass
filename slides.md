@@ -38,3 +38,9 @@ Continuous Integration and Deployment
 ## Memes
 
 Less memes
+
+---
+
+## Workflow Triggers & Structure
+
+Very nice workflow
