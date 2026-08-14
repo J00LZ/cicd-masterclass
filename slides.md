@@ -50,3 +50,9 @@ Very nice workflow
 ## Caching
 
 Not Ka-Ching
+
+---
+
+## Linting?
+
+It's very noice
