@@ -10,5 +10,6 @@ jobs:
             group: ${{ github.ref }}
             cancel-in-progress: true
         steps:
+            - uses: actions/checkout@v6
             - uses: pnpm/setup@v2
             - run: pnpm run build --base ${{github.event.repository.name}}
