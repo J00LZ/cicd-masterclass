@@ -9,6 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - uses: pnpm/setup@v2
+      - run: sleep 10
       - run: pnpm run build --base ${{github.event.repository.name}}
       - uses: actions/upload-pages-artifact@v5
         with:
