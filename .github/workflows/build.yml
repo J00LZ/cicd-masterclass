@@ -2,6 +2,12 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
+    inputs:
+      reason:
+        type: string
+        required: true
+        description: Why did you retrigger the deploy?
 
 jobs:
   build:
